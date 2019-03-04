@@ -14,7 +14,9 @@
                                     <a href="#">
                                         <img src="{{ asset('default/static/images/header.png') }}"></a>
                                     <p class="name"><i class="layui-icon  layui-icon-friends"></i>作者：{{ $user->name }}</p>
-                                    <p class="name"><i class="layui-icon  layui-icon-date"></i>注册于：</p>
+                                    <p class="name"><i class="layui-icon  layui-icon-date"></i>注册于：{{ $user->created_at->diffForHumans() }}</p>
+                                    <p class="name"><i class="layui-icon  layui-icon-template-1"></i>个人简介：</p>
+                                    <p class="name" style="  text-decoration:underline;color: #c1c1c1;">{{ $user->introduction }}</p>
                                     <p class="name">
                                         <a href="{{ route('users.edit', Auth::id()) }}">
                                             <i class="layui-icon  layui-icon-edit"></i>编辑资料

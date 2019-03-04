@@ -10,7 +10,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('default/static/css/main.css') }}">
 </head>
 <body class="micronews micronews-login ">
+
 @include('layouts._header')
+@include('layouts._message')
 @yield('content')
 @include('layouts._footer')
 {{--<script type="text/javascript" src="{{ asset('default/layui/layui.js') }}"></script>--}}
