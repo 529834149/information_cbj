@@ -9,11 +9,12 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('default/layui/css/layui.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('default/static/css/main.css') }}">
 </head>
-<body class="micronews micronews-login">
+<body class="micronews micronews-login ">
 @include('layouts._header')
 @yield('content')
 @include('layouts._footer')
-<script type="text/javascript" src="{{ asset('default/layui/layui.js') }}"></script>
+{{--<script type="text/javascript" src="{{ asset('default/layui/layui.js') }}"></script>--}}
+
 <!--[if lt IE 9]>
 <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
 <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>

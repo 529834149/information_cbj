@@ -5,7 +5,7 @@
     <div class="row" style="margin-top: 50px;">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+                <div class="panel-heading">登陆</div>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
@@ -52,7 +52,7 @@
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Login
+                                    登陆
                                 </button>
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
@@ -66,4 +66,5 @@
         </div>
     </div>
 </div>
+<script type="text/javascript" src="{{ asset('default/layui/layui.js') }}"></script>
 @endsection
