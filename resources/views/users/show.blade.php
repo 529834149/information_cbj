@@ -13,8 +13,13 @@
                                 <div class="layui-card-header">
                                     <a href="#">
                                         <img src="{{ asset('default/static/images/header.png') }}"></a>
-                                    <p class="name">作者：{{ $user->name }}</p>
-                                    <p class="name">注册于：</p>
+                                    <p class="name"><i class="layui-icon  layui-icon-friends"></i>作者：{{ $user->name }}</p>
+                                    <p class="name"><i class="layui-icon  layui-icon-date"></i>注册于：</p>
+                                    <p class="name">
+                                        <a href="{{ route('users.edit', Auth::id()) }}">
+                                            <i class="layui-icon  layui-icon-edit"></i>编辑资料
+                                        </a>
+                                    </p>
                                 </div>
                                 <div class="layui-card-body">
                                     <ul class="tab" id="tabHeader" lay-filter="myInfo">
