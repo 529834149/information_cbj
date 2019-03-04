@@ -58,8 +58,14 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img src="https://iocaffcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/60/h/60" class="img-responsive img-circle" width="30px" height="30px" style="    margin-top: 20px;">
                 </a>
-                <a href="{{ route('login') }}" >
-                    <span style="color: red;position: relative;bottom: 10px;">{{ Auth::user()->name }}</span>
+                {{--<a href="{{ route('login') }}" >--}}
+                    {{--<span style="color: red;position: relative;bottom: 10px;">{{ Auth::user()->name }}</span>--}}
+                {{--</a>--}}
+                <a class="dropdown-item" id="logout" href="#"  style="position:relative;bottom: 10px;" >
+                    <form action="{{ route('logout') }}" method="POST">
+                        {{ csrf_field() }}
+                        <button class="btn btn-block btn-danger" type="submit" name="button">退出</button>
+                    </form>
                 </a>
             @endguest
             <!-- <a href="login.html"> -->
