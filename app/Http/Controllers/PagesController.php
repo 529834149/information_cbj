@@ -13,7 +13,7 @@ class PagesController extends Controller
      */
     public function index()
     {
-       dd('111');
+       return view('Index/index');
     }
 
     /**

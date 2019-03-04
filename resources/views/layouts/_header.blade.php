@@ -1,13 +1,13 @@
 <div class="micronews-header-wrap">
     <div class="micronews-header w1000 layui-clear">
         <h1 class="logo">
-            <a href="index.html">
+            <a href="/">
                 <img src="{{ asset('default/static/images/LOGO.png') }}" alt="logo">
                 <span class="layui-hide">LOGO</span>
             </a>
         </h1>
         <p class="nav">
-            <a href="index.html" class="active">最新</a>
+            <a href="/" class="active">最新</a>
             <a href="list.html">娱乐</a>
             <a href="list.html">生活</a>
             <a href="list.html">财经</a>
