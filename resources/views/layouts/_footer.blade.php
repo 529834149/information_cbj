@@ -21,11 +21,11 @@
 </div>
 <style>
     .micronews-footer-wrap {
-        position: absolute;
+        /*position: absolute;*/
         bottom: 0;
         width: 100% ;
         /* Set the fixed height of the footer here */
-        height: 142px;
+        /*height: 142px;*/
         background-color: #000;
     }
 </style>
