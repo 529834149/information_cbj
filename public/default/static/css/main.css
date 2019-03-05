@@ -181,7 +181,7 @@ html, body{height: 100%;}
 
 
 /*micronews-login-container*/
-.micronews-login{width: 100%;min-height: 100%;  background: url(../images/loadbg.jpg) no-repeat; background-size: cover;}
+.micronews-login{width: 100%;min-height: 100%;  background: url(../images/loadbg.jpg) no-repeat center center fixed; background-size: cover;}
 .micronews-login-container .layui-form-item{margin:20px 0 0 0 ;}
 .micronews-login-container .agreement{margin-top: 0px;}
 .micronews-login-container .agreement a{color: #5980c5;}
