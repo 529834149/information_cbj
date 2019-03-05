@@ -35,7 +35,7 @@
             </a>
             @else
                 <a class="nav-link dropdown-toggle" href="/users/{{ Auth::user()->id }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="{{ $user->avatar }}" class="img-responsive img-circle" width="30px" height="30px" style="    margin-top: 20px;">
+                    <img src="{{ Auth::user()->avatar }}" class="img-responsive img-circle" width="30px" height="30px" style="    margin-top: 20px;">
                 </a>
                 <a class="dropdown-item" id="logout" href="#"  style="position:relative;bottom: 10px;" >
                     <form action="{{ route('logout') }}" method="POST">
