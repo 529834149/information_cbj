@@ -7,12 +7,12 @@
                 <div class="layui-col-xs12 layui-col-sm12 layui-col-md8">
                     <div class="main">
                         <div class="title">
-                            <h3>王健林29亿出售美国加州地块</h3>
+                            <h3> {{ $topic->title }}</h3>
                             <div class="b-txt">
-                                <span class="label">财经</span>
+                                <span class="label">{{ $topic->category->name }}</span>
                                 <span class="icon">
                                 <i class="layui-icon layui-icon-radio"></i>
-                                <b>3002</b>人</span>
+                                <b>{{ $topic->view_count }}</b>人</span>
                                 <a href="#message">
                                 <span class="icon message">
                                     <i class="layui-icon layui-icon-dialogue"></i>
@@ -57,7 +57,7 @@
                             <div class="content-box">
                                 <div class="tear-box">
                                     <a href="#">
-                                        <img src="../res/static/images/header_img1.png"></a>
+                                        <img src="{{ asset('default/static/images/header_img1.png') }}"></a>
                                     <form class="layui-form">
                                         <div class="layui-form-item layui-form-text">
                                             <div class="layui-input-block">
@@ -74,67 +74,13 @@
                                     </form>
                                 </div>
                                 <div class="ulCommentList">
-                                    <div class="liCont">
-                                        <a href="#">
-                                            <img src="../res/static/images/header_img1.png"></a>
-                                        <div class="item-cont">
-                                            <div class="cont">
-                                                <p>
-                                                    <span class="name">我是锦鲤</span>
-                                                    <span class="time">1小时前</span></p>
-                                                <p class="text">万达似乎在重新考虑该事项。此外，万达已经为这个项目支付高达8000万美元的费用和税款，但项目却迟迟未开工。</p></div>
-                                        </div>
-                                    </div>
-                                    <div class="liCont">
-                                        <a href="#">
-                                            <img src="../res/static/images/header_img1.png"></a>
-                                        <div class="item-cont">
-                                            <div class="cont">
-                                                <p>
-                                                    <span class="name">我是锦鲤</span>
-                                                    <span class="time">1小时前</span></p>
-                                                <p class="text">万达似乎在重新考虑该事项。此外，万达已经为这个项目支付高达8000万美元的费用和税款，但项目却迟迟未开工。</p></div>
-                                        </div>
-                                    </div>
-                                    <div class="liCont">
-                                        <a href="#">
-                                            <img src="../res/static/images/header_img1.png"></a>
-                                        <div class="item-cont">
-                                            <div class="cont">
-                                                <p>
-                                                    <span class="name">我是锦鲤</span>
-                                                    <span class="time">1小时前</span></p>
-                                                <p class="text">万达似乎在重新考虑该事项。此外，万达已经为这个项目支付高达8000万美元的费用和税款，但项目却迟迟未开工。</p></div>
-                                        </div>
-                                    </div>
-                                    <div class="liCont">
-                                        <a href="#">
-                                            <img src="../res/static/images/header_img1.png"></a>
-                                        <div class="item-cont">
-                                            <div class="cont">
-                                                <p>
-                                                    <span class="name">我是锦鲤</span>
-                                                    <span class="time">1小时前</span></p>
-                                                <p class="text">万达似乎在重新考虑该事项。此外，万达已经为这个项目支付高达8000万美元的费用和税款，但项目却迟迟未开工。</p></div>
-                                        </div>
-                                    </div>
+                                    @include('topics._topic_details')
                                 </div>
                                 <div id="micronews-details-test" style="text-align: center;"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- 留言模版引擎 -->
-                <script type="text/html" id="messageTpl">< div class = "liCont" > <a href = "" > <img src = "{{d.avatar}}" ></a>
-                    <div class="item-cont">
-                        <div class="cont">
-                            <p><span class="name">{{d.name}}</span > <span class = "time" > 1小时前 < /span></p > <p class = "text" > {
-                                {
-                                d.cont
-                                }
-                                } < /p>
-                        </div > </div>
-                    </div > </script>
                 <div class="layui-col-xs12 layui-col-sm12 layui-col-md4">
                     <div class="popular-info popular-info-tog">
                         <div class="layui-card">
@@ -143,7 +89,7 @@
                             <div class="layui-card-body">
                                 <ul class="list-box">
                                     <a href="details.html">
-                                        <img src="../res/static/images/news_img15.jpg" width="100%"></a>
+                                        <img src="{{ asset('default/static/images/news_img15.jpg') }}" width="100%"></a>
                                     <li class="list">
                                         <a href="#">南非金砖会议再造十年辉煌</a></li>
                                     <li class="list">
@@ -153,7 +99,7 @@
                                     <li class="list">
                                         <a href="#">“日销40万”外卖料包厂被曝光，制作过程令人作呕</a></li>
                                     <a href="details.html">
-                                        <img src="../res/static/images/news_img16.jpg" width="100%"></a>
+                                        <img src="{{ asset('default/static/images/news_img16.jpg') }}" width="100%"></a>
                                     <li class="list">
                                         <a href="#">韩国送的200吨橘子该怎么分？</a></li>
                                     <li class="list">
@@ -170,4 +116,26 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="{{ asset('default/layui/layui.js') }}"></script><script>
+        layui.config({
+            base: '/default/static/js/'
+        }).use('index',function(){
+            var index = layui.index,$ = layui.$;
+            index.EnterMessage()
+            index.Page('micronews-details-test',50)
+            var collOff = true;
+            $('.Collection').on('click',function(){
+                if(collOff){
+                    $(this).addClass('active')
+                }else{
+                    $(this).removeClass('active')
+                }
+                collOff = !collOff
+            })
+            index.seachBtn()
+            index.onInput()
+            index.arrowutil()
+        });
+    </script>
+
 @endsection
