@@ -6,13 +6,19 @@
                 <span class="layui-hide">LOGO</span>
             </a>
         </h1>
+        {{--<li class="{{ active_class(if_route('topics.index')) }}"><a href="{{ route('topics.index') }}">话题</a></li>--}}
+        {{--<li class="{{ active_class((if_route('categories.show') && if_route_param('category', 1))) }}"><a href="{{ route('categories.show', 1) }}">分享</a></li>--}}
+        {{--<li class="{{ active_class((if_route('categories.show') && if_route_param('category', 2))) }}"><a href="{{ route('categories.show', 2) }}">教程</a></li>--}}
+        {{--<li class="{{ active_class((if_route('categories.show') && if_route_param('category', 3))) }}"><a href="{{ route('categories.show', 3) }}">问答</a></li>--}}
+        {{--<li class="{{ active_class((if_route('categories.show') && if_route_param('category', 4))) }}"><a href="{{ route('categories.show', 4) }}">公告</a></li>--}}
+
         <p class="nav">
-            <a href="/" class="active">最新</a>
-            <a href="list.html">娱乐</a>
-            <a href="list.html">生活</a>
-            <a href="list.html">财经</a>
-            <a href="list.html">科技</a>
-            <a href="list.html">军事</a>
+            <a href="/" class="{{ active_class(if_route('/')) }}">首页</a>
+            <a href="{{ route('categories.show', 1) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 1))) }}" href="{{ route('categories.show', 1) }}">分享</a>
+            <a href="{{ route('categories.show', 2) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 2))) }}">教程</a>
+            <a href="{{ route('categories.show', 3) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 3))) }}">问答</a>
+            <a href="{{ route('categories.show', 4) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 4))) }}">公告</a>
+            <a href="#">关于</a>
         </p>
         <div class="search-bar">
             <form class="layui-form" action="">
