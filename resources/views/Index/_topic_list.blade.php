@@ -4,7 +4,7 @@
         <div class="item-info">
             <h4><a href="{{ route('topics.show', $topic->id) }}">{{$topic->title}}</a></h4>
             <div class="b-txt">
-                <span class="label">{{ $topic->category->name }}</span>
+                <span class="label"><a href="{{ route('categories.show', $topic->category->id) }}">{{ $topic->category->name }}</a></span>
                 <span class="icon message">
                     <i class="layui-icon layui-icon-dialogue"></i>
                     <a href="{{ route('topics.show', [$topic->id]) }}">
