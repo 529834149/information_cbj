@@ -8,25 +8,6 @@
                 <div class="layui-col-xs12 layui-col-sm12 layui-col-md8">
                     <div class="main">
                         <div class="list-item" id="LAY_demo2">
-                            {{--<div class="item">--}}
-                                {{--<a href="details.html">--}}
-                                    {{--<img src="{{ asset('default/static/images/news_img11.jpg') }}">--}}
-                                {{--</a>--}}
-                                {{--<div class="item-info">--}}
-                                    {{--<h4><a href="details.html">北京的卫生部门调查五星级酒店清洁 “丑闻” 已现场取样，还消费者真相</a></h4>--}}
-                                    {{--<div class="b-txt">--}}
-                                        {{--<span class="label">娱乐</span>--}}
-                                        {{--<span class="icon message">--}}
-                                          {{--<i class="layui-icon layui-icon-dialogue"></i>--}}
-                                          {{--500条--}}
-                                        {{--</span>--}}
-                                        {{--<span class="icon time">--}}
-                                          {{--<i class="layui-icon layui-icon-log"></i>--}}
-                                          {{--10分钟前--}}
-                                        {{--</span>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
                             @include('Index._topic_list', ['topics' => $topics])
                             {!! $topics->appends(Request::except('page'))->render() !!}
                         </div>

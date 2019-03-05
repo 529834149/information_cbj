@@ -1,4 +1,15 @@
 @if (count($topics))
+    <div class="item">
+        <div class="item-info">
+
+            <div class="b-txt">
+                <ul class="nav nav-pills">
+                    <li class="{{ active_class( ! if_query('order', 'recent') ) }}"><a href="{{ Request::url() }}?order=default" >最后回复</a></li>
+                    <li class="{{ active_class(if_query('order', 'recent')) }}"><a href="{{ Request::url() }}?order=recent" >最新发布</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     @foreach($topics as $topic)
     <div class="item">
         <div class="item-info">
