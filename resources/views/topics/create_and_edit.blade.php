@@ -80,5 +80,5 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="{{ asset('default/layui/layui.js') }}"></script>
+script type="text/javascript" src="{{ asset('default/layui/layui.js') }}"></script>
 @endsection
