@@ -16,10 +16,10 @@
                                 <a href="#message">
                                 <span class="icon message">
                                     <i class="layui-icon layui-icon-dialogue"></i>
-                                    <b>500</b>条</span>
+                                    <b>{{$topic->reply_count}}</b>条</span>
                                 </a>
                                 <span class="icon time">
-                                <i class="layui-icon layui-icon-log"></i>10分钟前</span>
+                                <i class="layui-icon layui-icon-log"></i>  {{ $topic->updated_at->diffForHumans() }}</span>
                             </div>
                         </div>
                         <div class="article">
