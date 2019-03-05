@@ -11,7 +11,9 @@
 #micronews-carouse .layui-carousel img{    max-width: 100%;
     height: 300px;}
 
-
+a{
+    color: #000!important;
+}
 .micronews .layui-fixbar li {
     width: 50px;
     height: 50px;
@@ -260,4 +262,5 @@ html, body{height: 100%;}
   .micronews-container .main{margin-left: 0;}
   #micronews-carouse{height: 150px;}
   #micronews-carouse img{height: 150px;}
+
 }
