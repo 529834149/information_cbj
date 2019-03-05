@@ -15,7 +15,7 @@
 @include('layouts._message')
 @yield('content')
 @include('layouts._footer')
-{{--<script type="text/javascript" src="{{ asset('default/layui/layui.js') }}"></script>--}}
+
 
 <!--[if lt IE 9]>
 <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
