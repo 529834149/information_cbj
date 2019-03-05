@@ -24,6 +24,7 @@
 
                         <tbody>
                             @foreach($topics as $topic)
+
                                 <tr>
                                     <td class="text-center"><strong>{{$topic->id}}</strong></td>
 
@@ -49,7 +50,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                    {!! $topics->render() !!}
+                    {!! $topics->appends(Request::except('page'))->render() !!}
                 @else
                     <h3 class="text-center alert alert-info">Empty!</h3>
                 @endif

@@ -3,9 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Topic;
+use App\Http\Requests\TopicRequest;
 class PagesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +18,8 @@ class PagesController extends Controller
      */
     public function index()
     {
-       return view('Index/index');
+        $topics = Topic::paginate();
+        return view('Index.index', compact('topics'));
     }
 
     /**
