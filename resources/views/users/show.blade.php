@@ -12,7 +12,7 @@
                             <div class="layui-card">
                                 <div class="layui-card-header">
                                     <a href="#">
-                                        <img src="{{ asset('default/static/images/header.png') }}"></a>
+                                        <img src="{{ $user->avatar }}" width="80" height="80"></a>
                                     <p class="name"><i class="layui-icon  layui-icon-friends"></i>作者：{{ $user->name }}</p>
                                     <p class="name"><i class="layui-icon  layui-icon-date"></i>注册于：{{ $user->created_at->diffForHumans() }}</p>
                                     <p class="name"><i class="layui-icon  layui-icon-template-1"></i>个人简介：</p>
