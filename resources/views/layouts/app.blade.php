@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('default/layui/css/layui.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('default/static/css/main.css') }}">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body class="micronews micronews-login ">
 
