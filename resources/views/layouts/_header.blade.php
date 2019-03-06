@@ -14,11 +14,11 @@
 
         <p class="nav">
             <a href="/" class="{{ active_class(if_route('/')) }}">首页</a>
-            <a href="{{ route('categories.show', 1) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 1))) }}" href="{{ route('categories.show', 1) }}">分享</a>
-            <a href="{{ route('categories.show', 2) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 2))) }}">教程</a>
-            <a href="{{ route('categories.show', 3) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 3))) }}">问答</a>
-            <a href="{{ route('categories.show', 4) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 4))) }}">公告</a>
-            <a href="#">关于</a>
+            <a href="{{ route('categories.show', 1) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 1))) }}" href="{{ route('categories.show', 1) }}">PHP</a>
+            <a href="{{ route('categories.show', 2) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 2))) }}">服务器</a>
+            <a href="{{ route('categories.show', 3) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 3))) }}">数据库</a>
+            <a href="{{ route('categories.show', 4) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 4))) }}">前端</a>
+            {{--<a href="#">关于</a>--}}
         </p>
         <div class="search-bar">
             <form class="layui-form" action="">
@@ -43,8 +43,8 @@
                 <a class="nav-link dropdown-toggle" href="/users/{{ Auth::user()->id }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img src="{{ Auth::user()->avatar }}" class="img-responsive img-circle"  style="margin-top: 20px;width: 30px;height: 30px;">
                 </a>
-                <a class="dropdown-item" id="logout" href="#"  style="position:relative;bottom: 10px;" >
-                    <form action="{{ route('logout') }}" method="POST">
+                <a class="dropdown-item" id="logout" href="#" style="position:relative;bottom: 10px;">
+                    <form action="{{ route('logout') }}" method="POST" onsubmit="return confirm('您确定要退出吗？');">
                         {{ csrf_field() }}
                         <button class="btn btn-block btn-danger" type="submit" name="button">退出</button>
                     </form>
@@ -59,12 +59,12 @@
         </div>
         <div class="mobile-nav">
             <ul class="layui-nav" lay-filter="">
-                <li class="layui-nav-item layui-this"><a href="index.html">最新</a></li>
-                <li class="layui-nav-item"><a href="list.html">娱乐</a></li>
-                <li class="layui-nav-item"><a href="list.html">生活</a></li>
-                <li class="layui-nav-item"><a href="list.html">财经</a></li>
-                <li class="layui-nav-item"><a href="list.html">科技</a></li>
-                <li class="layui-nav-item"><a href="list.html">军事</a></li>
+                <li class="layui-nav-item layui-this"><a href="index.html">首页</a></li>
+                <li class="layui-nav-item"><a href="list.html">PHP</a></li>
+                <li class="layui-nav-item"><a href="list.html">服务器</a></li>
+                <li class="layui-nav-item"><a href="list.html">数据库</a></li>
+                <li class="layui-nav-item"><a href="list.html">前端</a></li>
+                {{--<li class="layui-nav-item"><a href="list.html">军事</a></li>--}}
             </ul>
         </div>
     </div>
