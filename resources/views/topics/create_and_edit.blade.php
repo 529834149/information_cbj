@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="stylesheet" type="text/css" href="{{ asset('default/editor/css/simditor.css') }}">
 
 <div class="container">
     <div class="col-md-10 col-md-offset-1" style="margin-top: 25px;">
@@ -53,5 +54,35 @@
         </div>
     </div>
 </div>
+<script src="{{ asset('default/editor/js/jquery.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('default/layui/layui.js') }}"></script>
+<script src="{{ asset('default/editor/js/module.js') }}"></script>
+<script src="{{ asset('default/editor/js/hotkeys.js') }}"></script>
+<script src="{{ asset('default/editor/js/uploader.js') }}"></script>
+<script src="{{ asset('default/editor/js/simditor.js') }}"></script>
+/**
+pasteImage —— 设定是否支持图片黏贴上传，这里我们使用 true 进行开启；
+url —— 处理上传图片的 URL；
+params —— 表单提交的参数，Laravel 的 POST 请求必须带防止 CSRF 跨站请求伪造的 _token 参数；
+fileKey —— 是服务器端获取图片的键值，我们设置为 upload_file;
+connectionCount —— 最多只能同时上传 3 张图片；
+leaveConfirm —— 上传过程中，用户关闭页面时的提醒。
+*/
+<script>
+    $(document).ready(function() {
+        var editor = new Simditor({
+            textarea: $('#editor'),
+            upload: {
+                url: '{{ route('topics.upload_image') }}',
+                params: {
+                    _token: '{{ csrf_token() }}'
+                },
+                fileKey: 'upload_file',
+                connectionCount: 3,
+                leaveConfirm: '文件上传中，关闭此页面将取消上传。'
+            },
+            pasteImage: true,
+        });
+    });
+</script>
 @endsection
