@@ -18,8 +18,16 @@
                                     <p class="name"><i class="layui-icon  layui-icon-template-1"></i>个人简介：</p>
                                     <p class="name" style="  text-decoration:underline;color: #c1c1c1;">{{ $user->introduction }}</p>
                                     <p class="name">
-                                        <a href="{{ route('users.edit', Auth::id()) }}">
-                                            <i class="layui-icon  layui-icon-edit"></i>编辑资料
+                                        {{--<a href="{{ route('users.edit', Auth::id()) }}">--}}
+                                            {{--<i class="layui-icon  layui-icon-edit"></i>编辑资料--}}
+                                        {{--</a>--}}
+                                        <a href="{{ route('users.edit', Auth::id()) }}" class="btn btn-success btn-block" aria-label="Left Align" style="color: #fff!important;">
+                                            <i class="layui-icon  layui-icon-edit"></i> 编辑资料
+                                        </a>
+                                    </p>
+                                    <p class="name">
+                                        <a href="{{ route('topics.create') }}" class="btn btn-success btn-block" aria-label="Left Align" style="color: #fff!important;">
+                                            <i class="layui-icon  layui-icon-add-1"></i>   新建帖子
                                         </a>
                                     </p>
                                 </div>
