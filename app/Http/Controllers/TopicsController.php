@@ -46,9 +46,9 @@ class TopicsController extends Controller
 	public function edit(Topic $topic)
 	{
         $this->authorize('update', $topic);
-		return view('topics.create_and_edit', compact('topic'));
+        $categories = Category::all();
+        return view('topics.create_and_edit', compact('topic', 'categories'));
 	}
-
 	public function update(TopicRequest $request, Topic $topic)
 	{
 		$this->authorize('update', $topic);
@@ -62,8 +62,8 @@ class TopicsController extends Controller
 		$this->authorize('destroy', $topic);
 		$topic->delete();
 
-		return redirect()->route('topics.index')->with('message', 'Deleted successfully.');
-	}
+        return redirect()->route('topics.index')->with('success', '成功删除！');
+    }
     public function uploadImage(Request $request, ImageUploadHandler $uploader)
     {
         // 初始化返回数据，默认是失败的
@@ -85,5 +85,5 @@ class TopicsController extends Controller
         }
         return $data;
     }
-    
+
 }

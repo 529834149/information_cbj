@@ -2,7 +2,8 @@
 <html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="UTF-8">
-    <title>微新闻</title>
+    <title>@yield('title', '微新闻') - 资讯博客</title>
+    <meta name="description" content="@yield('description', '资讯博客 社区')" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">

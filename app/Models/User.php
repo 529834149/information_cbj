@@ -30,4 +30,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Topic::class);
     }
+
+    /**
+     * @param $model
+     * @return bool
+     * @msg 授权封装，不然每个授权文件中都写入该代码
+     */
+    public function isAuthorOf($model)
+    {
+        return $this->id == $model->user_id;
+    }
 }
