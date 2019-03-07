@@ -31,6 +31,7 @@
                     <i class="layui-icon layui-icon-friends"></i>
                  {{ $topic->user->name }}
                 </span>
+
             </div>
         </div>
     </div>
