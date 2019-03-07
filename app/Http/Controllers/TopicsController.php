@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Topic;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
@@ -17,11 +18,12 @@ class TopicsController extends Controller
         $this->middleware('auth', ['except' => ['index', 'show']]);
     }
 
-	public function index()
+	public function index(Request $request, Topic $topic)
 	{
 
-		$topics = Topic::paginate();
-		return view('topics.index', compact('topics'));
+        $topics = Topic::with('user', 'category')->paginate(30);
+        $topics = $topic->withOrder($request->order)->paginate(20);
+        return view('Index.index', compact('topics'));
 	}
 
     public function show(Topic $topic)
@@ -54,14 +56,13 @@ class TopicsController extends Controller
 		$this->authorize('update', $topic);
 		$topic->update($request->all());
 
-		return redirect()->route('topics.show', $topic->id)->with('message', 'Updated successfully.');
+		return redirect()->route('topics.show', $topic->id)->with('message', '更新成功');
 	}
 
 	public function destroy(Topic $topic)
 	{
 		$this->authorize('destroy', $topic);
-		$topic->delete();
-
+        $topic->delete();
         return redirect()->route('topics.index')->with('success', '成功删除！');
     }
     public function uploadImage(Request $request, ImageUploadHandler $uploader)
