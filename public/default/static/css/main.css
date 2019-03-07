@@ -145,7 +145,7 @@ html, body{height: 100%;}
 .micronews-details-container .content-box .layui-form .message-text{position: absolute; height: 100%; width: 100%; padding:0 90px 0 0px; text-align: left; box-sizing: border-box; line-height: 30px;}
 .micronews-details-container .content-box .layui-form .message-text .txt{padding-left: 10px; border:1px solid #e6e6e6; height:100%; box-sizing: border-box; border-top:0; border-right: 0; color: #ec414d;}
 .micronews-details-container .content-box .layui-form .layui-input-block{margin-left: 0; min-height: 30px;}
-.micronews-details-container .content-box .ulCommentList{margin-bottom: 30px;}
+.micronews-details-container .content-box .ulCommentList{margin-bottom: 0px;border-bottom: 1px solid #c2c2c2 }
 .micronews-details-container .content-box .ulCommentList .item-cont{padding-left: 50px;}
 .micronews-details-container .content-box .ulCommentList .cont{padding:10px 20px; background: #f5f6f7; word-wrap:break-word;}
 .micronews-details-container .liCont{padding:30px 0 0 0; border-bottom: 0;}
@@ -215,7 +215,7 @@ html, body{height: 100%;}
 .micronews-persInfo-content .ulCommentList{padding:0 30px;}
 .micronews-persInfo-content .item{border-bottom: 0; padding:0;}
 .micronews-persInfo-content .item h4 {margin-bottom: 0}
-.micronews-persInfo-content .liCont{padding:30px 0; border-bottom: 1px solid #eaeaea;}
+.micronews-persInfo-content .liCont{padding:0px 0; border-bottom: 1px solid #eaeaea;}
 .micronews-persInfo-content .liCont:last-child{border-bottom: 0;}
 .leave-message{min-height: 900px;}
 .micronews-persInfo-content .content-box{padding-bottom: 30px; display: none;}

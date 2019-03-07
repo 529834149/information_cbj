@@ -1,8 +1,9 @@
 @if (count($topics))
     @foreach ($topics as $topic)
-    <div class="ulCommentList">
-        <div class="liCont">
-            <div class="item">
+
+    <div class="ulCommentList" >
+        <div class="liCont" >
+            <div class="item" >
                 <div class="item-info">
                     <h4>
                         <a href="{{ route('topics.show', $topic->id) }}">{{ $topic->title }}</a>

@@ -59,11 +59,11 @@
         </div>
         <div class="mobile-nav">
             <ul class="layui-nav" lay-filter="">
-                <li class="layui-nav-item layui-this"><a href="index.html">首页</a></li>
-                <li class="layui-nav-item"><a href="list.html">PHP</a></li>
-                <li class="layui-nav-item"><a href="list.html">服务器</a></li>
-                <li class="layui-nav-item"><a href="list.html">数据库</a></li>
-                <li class="layui-nav-item"><a href="list.html">前端</a></li>
+                <li class="layui-nav-item layui-this"><a href="/">首页</a></li>
+                <li class="layui-nav-item"><a href="{{ route('categories.show', 1) }}">PHP</a></li>
+                <li class="layui-nav-item"><a href="{{ route('categories.show', 2) }}">服务器</a></li>
+                <li class="layui-nav-item"><a href="{{ route('categories.show', 3) }}">数据库</a></li>
+                <li class="layui-nav-item"><a href="{{ route('categories.show', 4) }}">前端</a></li>
                 {{--<li class="layui-nav-item"><a href="list.html">军事</a></li>--}}
             </ul>
         </div>
