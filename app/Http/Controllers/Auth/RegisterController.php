@@ -66,10 +66,16 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+
+
+
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'avatar' => 'https://iocaffcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/600/h/600',
         ]);
     }
 }

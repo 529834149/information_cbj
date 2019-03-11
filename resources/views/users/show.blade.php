@@ -16,7 +16,12 @@
                                     <p class="name"><i class="layui-icon  layui-icon-friends"></i>作者：{{ $user->name }}</p>
                                     <p class="name"><i class="layui-icon  layui-icon-date"></i>注册于：{{ $user->created_at->diffForHumans() }}</p>
                                     <p class="name"><i class="layui-icon  layui-icon-template-1"></i>个人简介：</p>
-                                    <p class="name" style="  text-decoration:underline;color: #c1c1c1;">{{ $user->introduction }}</p>
+                                    @if($user->introduction )
+                                        <p class="name" style="  text-decoration:underline;color: #c1c1c1;">{{ $user->introduction }}</p>
+                                    @else
+                                        <p class="name" style="  text-decoration:underline;color: #c1c1c1;">暂无简介</p>
+                                    @endif
+
                                     <p class="name">
                                         {{--<a href="{{ route('users.edit', Auth::id()) }}">--}}
                                             {{--<i class="layui-icon  layui-icon-edit"></i>编辑资料--}}

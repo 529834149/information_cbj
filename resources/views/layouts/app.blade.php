@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('default/layui/css/layui.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('default/static/css/main.css') }}">
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 </head>
 <body class="micronews micronews-login ">
 
@@ -20,8 +20,8 @@
 
 
 <!--[if lt IE 9]>
-<script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-<script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<script src="{{ asset('js/html5.min.js') }}"></script>
+<script src="{{ asset('js/respond.min.js') }}"></script>
 <![endif]-->
 <script>
     layui.config({
