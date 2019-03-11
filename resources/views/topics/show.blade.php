@@ -28,7 +28,7 @@
                                 @can('update', $topic)
                                     <div class="operate">
                                         <hr>
-                                        <a href="{{ route('topics.edit', $topic->id) }}" class="btn btn-outline-secondary btn-sm" role="button">
+                                        我是锦鲤   <a href="{{ route('topics.edit', $topic->id) }}" class="btn btn-outline-secondary btn-sm" role="button">
                                             <i class="far fa-edit"></i> 编辑
                                         </a>
                                         <form action="{{ route('topics.destroy', $topic->id) }}" method="post"
@@ -97,14 +97,32 @@
                                         </div>
                                     </form>
                                 </div>
-                                <div class="ulCommentList">
-                                    @include('topics._topic_details')
+                                {{--<div class="ulCommentList">--}}
+                                    {{--@include('topics._topic_details')--}}
+                                {{--</div>--}}
+                                <div class="card topic-reply mt-4">
+                                    <div class="card-body">
+                                        @include('topics._reply_box', ['topic' => $topic])
+                                        @include('topics._reply_list', ['replies' => $topic->replies()->with('user')->get()])
+                                    </div>
                                 </div>
                                 <div id="micronews-details-test" style="text-align: center;"></div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <style>
+                    .topic-reply {
+                    a {
+                        color: inherit;
+                    }
+
+                    .meta {
+                        font-size: .9em;
+                        color: #b3b3b3;
+                    }
+                    }
+                </style>
                 <div class="layui-col-xs12 layui-col-sm12 layui-col-md4">
                     <div class="popular-info popular-info-tog">
                         <div class="layui-card">

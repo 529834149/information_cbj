@@ -39,7 +39,7 @@
                                 <div class="layui-card-body">
                                     <ul class="tab" id="tabHeader" lay-filter="myInfo">
                                         <li lay-id="pl">我的话题</li>
-                                        <li lay-id="sc">我的收藏</li></ul>
+                                        <li lay-id="sc">我的回复</li></ul>
                                 </div>
                             </div>
                         </div>
@@ -56,113 +56,9 @@
                                 <!-- 我的收藏 -->
                                 <div class="content-box">
                                     <div class="ulCommentList">
-                                        <div class="liCont">
-                                            <div class="item">
-                                                <div class="item-info">
-                                                    <h4>
-                                                        <a href="details.html">想要头发好只要不洗头？ 英国女子留1.83米长发自爆近20年没洗过</a></h4>
-                                                    <div class="b-txt">
-                                                        <span class="label">娱乐</span>
-                                                        <span class="icon message">
-                                                        <i class="layui-icon layui-icon-dialogue"></i>500条</span>
-                                                        <span class="icon time">
-                                                        <i class="layui-icon layui-icon-log"></i>2018.08.28</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="liCont">
-                                            <div class="item">
-                                                <div class="item-info">
-                                                    <h4>
-                                                        <a href="details.html">想要头发好只要不洗头？ 英国女子留1.83米长发自爆近20年没洗过</a></h4>
-                                                    <div class="b-txt">
-                                                        <span class="label">娱乐</span>
-                                                        <span class="icon message">
-                                                        <i class="layui-icon layui-icon-dialogue"></i>500条</span>
-                                                        <span class="icon time">
-                                                        <i class="layui-icon layui-icon-log"></i>2018.08.28</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="liCont">
-                                            <div class="item">
-                                                <div class="item-info">
-                                                    <h4>
-                                                        <a href="details.html">想要头发好只要不洗头？ 英国女子留1.83米长发自爆近20年没洗过</a></h4>
-                                                    <div class="b-txt">
-                                                        <span class="label">娱乐</span>
-                                                        <span class="icon message">
-                                                        <i class="layui-icon layui-icon-dialogue"></i>500条</span>
-                                                        <span class="icon time">
-                                                        <i class="layui-icon layui-icon-log"></i>2018.08.28</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="liCont">
-                                            <div class="item">
-                                                <div class="item-info">
-                                                    <h4>
-                                                        <a href="details.html">想要头发好只要不洗头？ 英国女子留1.83米长发自爆近20年没洗过</a></h4>
-                                                    <div class="b-txt">
-                                                        <span class="label">娱乐</span>
-                                                        <span class="icon message">
-                                                        <i class="layui-icon layui-icon-dialogue"></i>500条</span>
-                                                        <span class="icon time">
-                                                        <i class="layui-icon layui-icon-log"></i>2018.08.28</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="liCont">
-                                            <div class="item">
-                                                <div class="item-info">
-                                                    <h4>
-                                                        <a href="details.html">想要头发好只要不洗头？ 英国女子留1.83米长发自爆近20年没洗过</a></h4>
-                                                    <div class="b-txt">
-                                                        <span class="label">娱乐</span>
-                                                        <span class="icon message">
-                                                        <i class="layui-icon layui-icon-dialogue"></i>500条</span>
-                                                        <span class="icon time">
-                                                        <i class="layui-icon layui-icon-log"></i>2018.08.28</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="liCont">
-                                            <div class="item">
-                                                <div class="item-info">
-                                                    <h4>
-                                                        <a href="details.html">想要头发好只要不洗头？ 英国女子留1.83米长发自爆近20年没洗过</a></h4>
-                                                    <div class="b-txt">
-                                                        <span class="label">娱乐</span>
-                                                        <span class="icon message">
-                                                        <i class="layui-icon layui-icon-dialogue"></i>500条</span>
-                                                        <span class="icon time">
-                                                        <i class="layui-icon layui-icon-log"></i>2018.08.28</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="liCont">
-                                            <div class="item">
-                                                <div class="item-info">
-                                                    <h4>
-                                                        <a href="details.html">想要头发好只要不洗头？ 英国女子留1.83米长发自爆近20年没洗过</a></h4>
-                                                    <div class="b-txt">
-                                                        <span class="label">娱乐</span>
-                                                        <span class="icon message">
-                                                        <i class="layui-icon layui-icon-dialogue"></i>500条</span>
-                                                        <span class="icon time">
-                                                        <i class="layui-icon layui-icon-log"></i>2018.08.28</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @include('users._replies', ['replies' => $user->replies()->with('topic')->recent()->paginate(5)])
                                     </div>
-                                    <div id="micronews-details-test1" style="text-align: center;"></div>
+
                                 </div>
                                 <!-- 结束-我的收藏 --></div>
                         </div>
