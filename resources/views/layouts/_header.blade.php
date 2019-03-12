@@ -40,15 +40,35 @@
                 注册
             </a>
             @else
+                <a  class="infos nav-link mr-3 badge badge-pill badge-{{ Auth::user()->notification_count > 0 ? 'hint' : 'secondary' }} text-white" href="{{ route('notifications.index') }}">
+                    {{ Auth::user()->notification_count }}
+                </a>
+                <style>
+                    .badge-secondary {
+                        background-color: #EBE8E8;
+                    }
+
+                    .badge-hint {
+                        background-color: #d15b47 !important;;
+                    }
+                    .infos{
+                        border-radius: 20px!important;
+                        padding: 5px !important;
+                        position: relative;
+                        bottom: 10px;
+                    }
+                </style/>
                 <a class="nav-link dropdown-toggle" href="/users/{{ Auth::user()->id }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img src="{{ Auth::user()->avatar }}" class="img-responsive img-circle"  style="margin-top: 20px;width: 30px;height: 30px;">
                 </a>
+
                 <a class="dropdown-item" id="logout" href="#" style="position:relative;bottom: 10px;">
                     <form action="{{ route('logout') }}" method="POST" onsubmit="return confirm('您确定要退出吗？');">
                         {{ csrf_field() }}
                         <button class="btn btn-block btn-danger" type="submit" name="button">退出</button>
                     </form>
                 </a>
+
             @endguest
             <!-- <a href="login.html"> -->
             <!-- <img src="../res/static/images/header.png" style="width: 36px; height: 36px;"> -->

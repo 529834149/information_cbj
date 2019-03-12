@@ -1,4 +1,4 @@
-<div class="micronews-footer-wrap">
+<div class="micronews-footer-wrap ">
     <div class="micronews-footer w1000">
         <div class="ft-nav">
             <a href="#">关于我们</a>
@@ -21,6 +21,7 @@
 </div>
 <style>
     .micronews-footer-wrap {
+
         /*position: absolute;*/
         bottom: 0;
         width: 100% ;
