@@ -28,6 +28,7 @@ class TopicsController extends Controller
 
     public function show(Topic $topic)
     {
+        $res= Topic::where('id',$topic['id'])->increment('view_count');
         return view('topics.show', compact('topic'));
     }
 

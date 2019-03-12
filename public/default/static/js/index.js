@@ -90,28 +90,28 @@ layui.define(['carousel','jquery','element','flow','laytpl','element','laypage',
     // 输入留言
     EnterMessage: function(){
       $('.micronews-details-Publish').on('click',function(e){
-        var event = e || event;
-        var img = $(this).parents('form').siblings('a').find('img').attr('src');
+        // var event = e || event;
+        // var img = $(this).parents('form').siblings('a').find('img').attr('src');
         var messagetext = $(this).siblings('.message-text').find('.txt');
         var textarea = $(this).parents('.layui-form-item').siblings('.layui-form-text').children('.layui-input-block').children('textarea');
         if(!textarea.val()){
           messagetext.text('请输入留言')
           return;
         }
-        var name = $(textarea).val();
-        var view = $('.ulCommentList')
-        var html = messageTpl.innerHTML;
-        var data = {
-          avatar : img,
-          name : '我是锦鲤',
-          cont : name,
-        }
-        $('.message-text .txt').text('')
-        laytpl(html).render(data, function(html){
-          view.prepend(html)
-        });
-        textarea.val("")
-        return false;
+        // var name = $(textarea).val();
+        // var view = $('.ulCommentList')
+        // var html = messageTpl.innerHTML;
+        // var data = {
+        //   avatar : img,
+        //   name : '我是锦鲤',
+        //   cont : name,
+        // }
+        // $('.message-text .txt').text('')
+        // laytpl(html).render(data, function(html){
+        //   view.prepend(html)
+        // });
+        // textarea.val("")
+        // return false;
       })
     },
     onInput: function(){

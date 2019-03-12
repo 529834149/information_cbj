@@ -76,37 +76,25 @@
                             <div class="tit-box">
                                 <span class="tit">网友跟帖</span>
                                 <span class="num">
-                                <b>500</b>条</span>
+                                <b>{{$topic->reply_count}}</b>条</span>
                             </div>
                             <div class="content-box">
                                 <div class="tear-box">
-                                    <a href="#">
-                                        <img src="{{ asset('default/static/images/header_img1.png') }}"></a>
-                                    <form class="layui-form">
-                                        <div class="layui-form-item layui-form-text">
-                                            <div class="layui-input-block">
-                                                <textarea id="onInput" placeholder="请输入内容" class="layui-textarea"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="layui-form-item">
-                                            <div class="layui-input-block" style="text-align: right;">
-                                                <div class="message-text">
-                                                    <div class="txt"></div>
-                                                </div>
-                                                <button type="button" class="layui-btn micronews-details-Publish">发表</button></div>
-                                        </div>
-                                    </form>
+                                    @includeWhen(Auth::check(), 'topics._reply_box', ['topic' => $topic])
+
                                 </div>
-                                {{--<div class="ulCommentList">--}}
-                                    {{--@include('topics._topic_details')--}}
+                                {{--<a href="#"><img src="{{ $topic->user->avatar }}"></a>--}}
+                                {{--<div class="tear-box">--}}
+                                    {{--<a href="#">--}}
+                                        {{--@includeWhen(Auth::check(), 'topics._reply_box', ['topic' => $topic])--}}
+                                    {{--</a>--}}
                                 {{--</div>--}}
                                 <div class="card topic-reply mt-4">
                                     <div class="card-body">
-                                        @include('topics._reply_box', ['topic' => $topic])
                                         @include('topics._reply_list', ['replies' => $topic->replies()->with('user')->get()])
                                     </div>
                                 </div>
-                                <div id="micronews-details-test" style="text-align: center;"></div>
+
                             </div>
                         </div>
                     </div>
@@ -183,7 +171,9 @@
 
         }
     </style>
-    <script type="text/javascript" src="{{ asset('default/layui/layui.js') }}"></script><script>
+    <script type="text/javascript" src="{{ asset('default/layui/layui.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('default/js/jquery.min.js') }}"></script>
+    <script>
         layui.config({
             base: '/default/static/js/'
         }).use('index',function(){
