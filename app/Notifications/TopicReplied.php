@@ -9,7 +9,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 use App\Models\Reply;
 
 
-class TopicReplied extends Notification 
+class TopicReplied extends Notification
 {
     use Queueable;
 
@@ -24,7 +24,7 @@ class TopicReplied extends Notification
     public function via($notifiable)
     {
         // 开启通知的频道
-        return ['database','mail'];
+        return ['database'];
     }
 
     public function toDatabase($notifiable)
