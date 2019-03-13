@@ -14,8 +14,8 @@ class CategoriesController extends Controller
         $topics = $topic->withOrder($request->order)
             ->where('category_id', $category->id)
             ->paginate(20);
-
+        $right_order_article = $topic->withOrder('orderright')->limit(10)->get();
         // 传参变量话题和分类到模板中
-        return view('Index.index', compact('topics', 'category'));
+        return view('Index.index', compact('topics', 'category','right_order_article'));
     }
 }
