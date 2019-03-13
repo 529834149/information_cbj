@@ -15,6 +15,10 @@
                                     <i class="layui-icon layui-icon-radio"></i>
                                     <b>{{ $topic->view_count }}</b>人
                                 </span>
+                                <span class="icon">
+                                    <i class="layui-icon layui-icon-username"></i>
+                                    <b>{{ $topic->user->name }}</b>
+                                </span>
                                 <a href="#message">
                                     <span class="icon message">
                                         <i class="layui-icon layui-icon-dialogue"></i>
@@ -28,7 +32,7 @@
                                 @can('update', $topic)
                                     <div class="operate">
                                         <hr>
-                                        我是锦鲤   <a href="{{ route('topics.edit', $topic->id) }}" class="btn btn-outline-secondary btn-sm" role="button">
+                                        <a href="{{ route('topics.edit', $topic->id) }}" class="btn btn-outline-secondary btn-sm" role="button">
                                             <i class="far fa-edit"></i> 编辑
                                         </a>
                                         <form action="{{ route('topics.destroy', $topic->id) }}" method="post"
