@@ -37,7 +37,7 @@ html, body{height: 100%;}
 .micronews-header{line-height: 70px; height: 70px; position: relative; font-size: 16px;}
 .micronews-header .logo,.micronews-header .nav,.micronews-header .search-bar,.micronews-header .search-bar button,.micronews-header .search-bar input{float: left;}
 .micronews-header .search-bar input{background: #f6f6f8;}
-.micronews-header .logo{width: 100px; text-align: center;}
+.micronews-header .logo{width: 100px; text-align: center;bottom: 8px; position: relative;}
 .micronews-header .nav{padding: 0 10px;}
 .micronews-header .nav a{display: inline-block; height: 70px; font-size: 16px; color: #222; padding:0 22px; float: left;}
 .micronews-header .nav a.active{background: #6294b5; color: #fff;}
@@ -231,7 +231,7 @@ html, body{height: 100%;}
 @media screen and (max-width: 1024px){
   .micronews-header{height: 60px; line-height: 60px;}
   .micronews-header .search-bar,.micronews-header .nav{display: none;}
-  .micronews-header .logo{position: absolute; left: 50%; margin-left: -50px;}
+  .micronews-header .logo{position: absolute; left: 38%; margin-left: -50px;bottom: 0px;}
   .micronews-banner .title{display: none;}
   .micronews-container .layui-fluid{padding:0 15px;}
   .micronews-footer{text-align: center;}
