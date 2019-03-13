@@ -2,7 +2,7 @@
     <div class="micronews-header w1000 layui-clear">
         <h1 class="logo">
             <a href="/">
-                <img src="{{ asset('default/static/images/LOGO.png') }}" alt="logo">
+                <img src="{{ asset('default/static/images/LOGO.png') }}" alt="logo" width="66px" height="29.48">
                 <span class="layui-hide">LOGO</span>
             </a>
         </h1>
