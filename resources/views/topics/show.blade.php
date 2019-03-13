@@ -122,8 +122,12 @@
                                 <h3>资讯推荐</h3></div>
                             <div class="layui-card-body">
                                 <ul class="list-box">
+
                                     <a href="details.html">
-                                        <img src="{{ asset('default/static/images/news_img15.jpg') }}" width="100%"></a>
+                                        <img src="{{ asset('default/static/images/news_img15.jpg') }}" width="100%">
+                                    </a>
+                                    热门资讯
+
                                     <li class="list">
                                         <a href="#">南非金砖会议再造十年辉煌</a></li>
                                     <li class="list">

@@ -20,7 +20,8 @@ class PagesController extends Controller
     {
 //        $topics = Topic::with('user', 'category')->paginate(30);
         $topics = $topic->withOrder($request->order)->paginate(20);
-        return view('Index.index', compact('topics'));
+        $right_order_article = $topic->withOrder('orderright')->limit(10)->get();
+        return view('Index.index', compact('topics','right_order_article'));
     }
 
     /**

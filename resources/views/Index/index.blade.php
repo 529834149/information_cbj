@@ -17,60 +17,16 @@
                     <div class="popular-info">
                         <div class="layui-card">
                             <div class="layui-card-header">
-                                <h3>热门资讯</h3>
+                                <h3>最热门</h3>
                             </div>
+
                             <div class="layui-card-body">
                                 <ul class="list-box">
+                                    @foreach($right_order_article as $k=>$v)
                                     <li class="list">
-
-                                        <a href="list.html">你和我的倾城时光</a><i class="heat-icon"></i>
-
+                                        <a href="{{ route('topics.show', $v->id) }}">{{$v['title']}}</a><i class="heat-icon"></i>
                                     </li>
-                                    <li class="list">
-
-                                        <a href="list.html">顶级酒店内幕被曝光</a><i class="heat-icon"></i>
-
-                                    </li>
-                                    <li class="list">
-
-                                        <a href="list.html">王思聪抽奖</a><i class="heat-icon"></i>
-
-                                    </li>
-                                    <li class="list">
-
-                                        <a href="list.html">王者荣耀上官婉儿</a>
-
-                                    </li>
-                                    <li class="list">
-
-                                        <a href="list.html">妻子的浪漫旅行</a>
-
-                                    </li>
-                                    <li class="list">
-
-                                        <a href="list.html">海底捞回应员工偷拍</a>
-
-                                    </li>
-                                    <li class="list">
-
-                                        <a href="list.html">扎克伯格禁止高管用iPhone</a>
-
-                                    </li>
-                                    <li class="list">
-
-                                        <a href="list.html">王思聪抽手机壳送手机</a>
-
-                                    </li>
-                                    <li class="list">
-
-                                        <a href="list.html">每天闹钟20次提醒男友抽奖 </a>
-
-                                    </li>
-                                    <li class="list">
-
-                                        <a href=list.html#">詹姆斯收藏比赛用球</a>
-
-                                    </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
