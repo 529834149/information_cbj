@@ -2,6 +2,7 @@
 @section('title', $topic->title)
 @section('description', $topic->excerpt)
 @section('content')
+
     <div class="micronews-container micronews-details-container w1000">
         <div class="layui-fluid">
             <div class="layui-row">
@@ -127,25 +128,28 @@
                                         <img src="{{ asset('default/static/images/news_img15.jpg') }}" width="100%">
                                     </a>
                                     热门资讯
+                                    @foreach($right_order_article as $v)
+                                        <li class="list">
+                                            <a href="{{ route('topics.show', $v->id) }}">{{$v['title']}}</a>
+                                        </li>
+                                    @endforeach
 
-                                    <li class="list">
-                                        <a href="#">南非金砖会议再造十年辉煌</a></li>
-                                    <li class="list">
-                                        <a href="#">中流击水 奋楫者进_中共十九大</a></li>
-                                    <li class="list">
-                                        <a href="#">你好！新时代_2018全国两会</a></li>
-                                    <li class="list">
-                                        <a href="#">“日销40万”外卖料包厂被曝光，制作过程令人作呕</a></li>
-                                    <a href="details.html">
-                                        <img src="{{ asset('default/static/images/news_img16.jpg') }}" width="100%"></a>
-                                    <li class="list">
-                                        <a href="#">韩国送的200吨橘子该怎么分？</a></li>
-                                    <li class="list">
-                                        <a href="#">中流击水 奋楫者进_中共十九大</a></li>
-                                    <li class="list">
-                                        <a href="#">你好！新时代_2018全国两会</a></li>
-                                    <li class="list">
-                                        <a href="#">“日销40万”外卖料包厂被曝光，制作过程令人作呕</a></li>
+                                    {{--<li class="list">--}}
+                                        {{--<a href="#">中流击水 奋楫者进_中共十九大</a></li>--}}
+                                    {{--<li class="list">--}}
+                                        {{--<a href="#">你好！新时代_2018全国两会</a></li>--}}
+                                    {{--<li class="list">--}}
+                                        {{--<a href="#">“日销40万”外卖料包厂被曝光，制作过程令人作呕</a></li>--}}
+                                    {{--<a href="details.html">--}}
+                                        {{--<img src="{{ asset('default/static/images/news_img16.jpg') }}" width="100%"></a>--}}
+                                    {{--<li class="list">--}}
+                                        {{--<a href="#">韩国送的200吨橘子该怎么分？</a></li>--}}
+                                    {{--<li class="list">--}}
+                                        {{--<a href="#">中流击水 奋楫者进_中共十九大</a></li>--}}
+                                    {{--<li class="list">--}}
+                                        {{--<a href="#">你好！新时代_2018全国两会</a></li>--}}
+                                    {{--<li class="list">--}}
+                                        {{--<a href="#">“日销40万”外卖料包厂被曝光，制作过程令人作呕</a></li>--}}
                                 </ul>
                             </div>
                         </div>

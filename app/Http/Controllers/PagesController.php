@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Topic;
+use App\Models\User;
 use App\Http\Requests\TopicRequest;
 class PagesController extends Controller
 {
@@ -16,12 +17,12 @@ class PagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request, Topic $topic)
+    public function index(Request $request, Topic $topic,User $user)
     {
-//        $topics = Topic::with('user', 'category')->paginate(30);
         $topics = $topic->withOrder($request->order)->paginate(20);
+        $active_users = $user->getActiveUsers();
         $right_order_article = $topic->withOrder('orderright')->limit(10)->get();
-        return view('Index.index', compact('topics','right_order_article'));
+        return view('Index.index', compact('topics', 'active_users','right_order_article'));
     }
 
     /**
