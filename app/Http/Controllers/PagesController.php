@@ -20,8 +20,10 @@ class PagesController extends Controller
      */
     public function index(Request $request, Topic $topic,User $user)
     {
-        $user =Redis::set('name', 'Taylor');
-        echo Redis::get('name');
+        Redis::set('name', 'Taylor');
+        $ress =Redis::get('name');
+        dd($ress);
+
         $topics = $topic->withOrder($request->order)->paginate(20);
         $active_users = $user->getActiveUsers();
         $right_order_article = $topic->withOrder('orderright')->limit(10)->get();
