@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Topic;
 use App\Models\User;
 use App\Http\Requests\TopicRequest;
+use Illuminate\Support\Facades\Redis;
 class PagesController extends Controller
 {
     public function __construct()
@@ -19,6 +20,8 @@ class PagesController extends Controller
      */
     public function index(Request $request, Topic $topic,User $user)
     {
+        $user =Redis::set('name', 'Taylor');
+        echo Redis::get('name');
         $topics = $topic->withOrder($request->order)->paginate(20);
         $active_users = $user->getActiveUsers();
         $right_order_article = $topic->withOrder('orderright')->limit(10)->get();
