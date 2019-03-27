@@ -18,18 +18,11 @@
             <a href="{{ route('categories.show', 2) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 2))) }}">服务器</a>
             <a href="{{ route('categories.show', 3) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 3))) }}">数据库</a>
             <a href="{{ route('categories.show', 4) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 4))) }}">前端</a>
+            <a href="{{ route('categories.show', 5) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 5))) }}">资料信息</a>
+            <a href="{{ route('categories.show', 6) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 6))) }}">时间轴</a>
             {{--<a href="#">关于</a>--}}
         </p>
-        <div class="search-bar">
-            <form class="layui-form" action="">
-                <div class="layui-form-item">
-                    <div class="layui-input-block">
-                        <input type="text" name="title"  placeholder="搜索你要的内容" autocomplete="off" class="layui-input">
-                        <button class="layui-btn search-btn"  formnovalidate><i class="layui-icon layui-icon-search"></i></button>
-                    </div>
-                </div>
-            </form>
-        </div>
+
 
         <div class="login">
             @guest
