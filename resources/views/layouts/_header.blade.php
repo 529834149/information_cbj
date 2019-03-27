@@ -19,7 +19,7 @@
             <a href="{{ route('categories.show', 3) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 3))) }}">数据库</a>
             <a href="{{ route('categories.show', 4) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 4))) }}">前端</a>
             <a href="{{ route('categories.show', 5) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 5))) }}">资料信息</a>
-            <a href="{{ route('categories.show', 6) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 6))) }}">时间轴</a>
+            <a href="/time" id="times" class="">时间轴</a>
             {{--<a href="#">关于</a>--}}
         </p>
 

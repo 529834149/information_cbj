@@ -31,3 +31,6 @@ Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload
 Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
 
 Route::resource('notifications', 'NotificationsController', ['only' => ['index']]);//消息通知列表
+
+//时间轴
+Route::resource('time', 'TimeController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
