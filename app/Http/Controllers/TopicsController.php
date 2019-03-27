@@ -65,6 +65,14 @@ class TopicsController extends Controller
 	public function update(TopicRequest $request, Topic $topic)
 	{
 		$this->authorize('update', $topic);
+        //正则匹配图片
+        $pattern="/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg|\.png]))[\'|\"].*?[\/]?>/";
+        preg_match_all($pattern,$request->body,$matchContent);
+        if(isset($matchContent[1][0])){
+            $topic->picture=$matchContent[1][0];
+        }else{
+            $topic->picture="";//需要在相应位置放置4张jpg的文件，名称为1，2，3，4
+        }
 		$topic->update($request->all());
 
 		return redirect()->route('topics.show', $topic->id)->with('message', '更新成功');
