@@ -35,6 +35,7 @@ class TopicsController extends Controller
 
 	public function create(Topic $topic)
 	{
+
         $categories = Category::all();
         return view('topics.create_and_edit', compact('topic', 'categories'));
 	}
@@ -42,6 +43,14 @@ class TopicsController extends Controller
     public function store(TopicRequest $request, Topic $topic)
     {
         $topic->fill($request->all());
+        //正则匹配图片
+        $pattern="/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg|\.png]))[\'|\"].*?[\/]?>/";
+        preg_match_all($pattern,$request->body,$matchContent);
+        if(isset($matchContent[1][0])){
+            $topic->picture=$matchContent[1][0];
+        }else{
+            $topic->picture="";//需要在相应位置放置4张jpg的文件，名称为1，2，3，4
+        }
         $topic->user_id = Auth::id();
         $topic->save();
         return redirect()->route('topics.show', $topic->id)->with('success', '帖子创建成功！');

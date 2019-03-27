@@ -11,7 +11,13 @@
         </div>
     </div>
     @foreach($topics as $topic)
+
     <div class="item">
+        @if($topic->picture)
+        <a href="{{ route('topics.show', $topic->id) }}">
+            <img src="{{$topic->picture}}" width="160px" height="100px">
+        </a>
+        @endif
         <div class="item-info">
             <h4><a href="{{ route('topics.show', $topic->id) }}">{{$topic->title}}</a></h4>
             <div class="b-txt">
