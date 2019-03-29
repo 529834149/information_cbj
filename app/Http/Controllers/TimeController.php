@@ -53,12 +53,15 @@ class TimeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $time  时间
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($time)
     {
-        //
+        $first_time = $time.' 00:00:00';
+        $last_time = $time.' 23:59:59';
+        $time_article = Topic::with('user', 'category')->whereBetween('created_at', [$first_time, $last_time])->paginate(30);
+        return view('time.show',compact('time_article'));;
     }
 
     /**
