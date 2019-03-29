@@ -14,11 +14,11 @@
 
         <p class="nav">
             <a href="/" class="{{ active_class(if_route('/')) }}">首页</a>
-            <a href="{{ route('categories.show', 1) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 1))) }}" href="{{ route('categories.show', 1) }}">PHP</a>
-            <a href="{{ route('categories.show', 2) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 2))) }}">服务器</a>
-            <a href="{{ route('categories.show', 3) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 3))) }}">数据库</a>
-            <a href="{{ route('categories.show', 4) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 4))) }}">前端</a>
-            <a href="{{ route('categories.show', 5) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 5))) }}">git常用包</a>
+            <a href="{{ route('categories.show', 1) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 1))) }}" href="{{ route('categories.show', 1) }}">PHP技术交流</a>
+            <a href="{{ route('categories.show', 2) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 2))) }}">Web前端技术</a>
+            <a href="{{ route('categories.show', 3) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 3))) }}">服务器</a>
+            <a href="{{ route('categories.show', 4) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 4))) }}">数据库</a>
+            <a href="{{ route('categories.show', 5) }}" class="{{ active_class((if_route('categories.show') && if_route_param('category', 5))) }}">大数据</a>
             <a href="/time" id="times" class="">时间轴</a>
             {{--<a href="#">关于</a>--}}
         </p>
@@ -73,10 +73,10 @@
         <div class="mobile-nav">
             <ul class="layui-nav" lay-filter="">
                 <li class="layui-nav-item layui-this"><a href="/">首页</a></li>
-                <li class="layui-nav-item"><a href="{{ route('categories.show', 1) }}">PHP</a></li>
-                <li class="layui-nav-item"><a href="{{ route('categories.show', 2) }}">服务器</a></li>
-                <li class="layui-nav-item"><a href="{{ route('categories.show', 3) }}">数据库</a></li>
-                <li class="layui-nav-item"><a href="{{ route('categories.show', 4) }}">前端</a></li>
+                <li class="layui-nav-item"><a href="{{ route('categories.show', 1) }}">PHP技术交流</a></li>
+                <li class="layui-nav-item"><a href="{{ route('categories.show', 2) }}">Web前端技术</a></li>
+                <li class="layui-nav-item"><a href="{{ route('categories.show', 3) }}">服务器</a></li>
+                <li class="layui-nav-item"><a href="{{ route('categories.show', 4) }}">数据库</a></li>
                 {{--<li class="layui-nav-item"><a href="list.html">军事</a></li>--}}
             </ul>
         </div>

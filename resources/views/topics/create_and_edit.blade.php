@@ -48,8 +48,8 @@
                     <textarea name="body" class="form-control" id="editor" rows="6" placeholder="请填入至少三个字符的内容。" required>{{ old('body', $topic->body ) }}</textarea>
                 </div>
                 <div class="well well-sm">
-                    <button type="submit" class="btn btn-primary">Save</button>
-                    <a class="btn btn-link pull-right" href="{{ route('topics.index') }}"><i class="glyphicon glyphicon-backward"></i>  Back</a>
+                    <button type="submit" class="btn btn-primary">发布</button><small style="margin-left: 30px;">!请谨慎发帖</small>
+
                 </div>
                 </form>
             </div>
