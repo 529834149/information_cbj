@@ -18,7 +18,7 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 //用户个人资料
-Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
+Route::resource('users', 'UsersController', ['only' => ['index','show', 'update', 'edit','destroy']]);
 Route::resource('projects', 'ProjectsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 
@@ -33,4 +33,4 @@ Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]
 Route::resource('notifications', 'NotificationsController', ['only' => ['index']]);//消息通知列表
 
 //时间轴
-Route::resource('time', 'TimeController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::resource('time', 'TimeusersController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
