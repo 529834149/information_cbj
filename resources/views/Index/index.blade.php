@@ -20,32 +20,44 @@
                     假设用户 A 在 7 天内发了 10 篇帖子，发了 5 条评论，则其得分为
                     10 * 4 + 5 * 1 = 45--}}
                     <div class="popular-info">
-                        <div class="card ">
-                            <div class="card-body">
-                                <a href="{{ route('topics.create') }}" class="btn btn-success btn-block" aria-label="Left Align">
-                                    <i class="fas fa-pencil-alt mr-2"></i> 新建帖子
-                                </a>
-                            </div>
-                        </div>
+
+                        {{--<div class="card ">--}}
+                            {{--<div class="card-body">--}}
+                                {{--<a href="{{ route('topics.create') }}" class="btn btn-success btn-block" aria-label="Left Align">--}}
+                                    {{--<i class="fas fa-pencil-alt mr-2"></i> 新建帖子--}}
+                                {{--</a>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
                         <div class="layui-card">
-                            <div class="layui-card-header">
-                                <h3>活跃用户排行榜</h3>
+                            <div class="layui-card-header" style="border-bottom: 1px solid #eaeaea;">
+                                <h3>技术知识社区</h3>
+
                             </div>
                             <div class="layui-card-body">
                                 <ul class="list-box">
-                                    {{--//边缘用户--}}
-                                    @if (count($active_users))
-                                        @foreach ($active_users as $active_user)
-                                            <a class="media mt-2" href="{{ route('users.show', $active_user->id) }}">
-                                                <div class="media-left media-middle mr-2 ml-1">
-                                                    <img src="{{ $active_user->avatar }}" width="24px" height="24px" class="media-object" style="border-radius: 12px;">
-                                                </div>
-                                                <div class="media-body">
-                                                    <small class="media-heading text-secondary">{{ $active_user->name }}</small>
-                                                </div>
+                                    <div class="card ">
+                                        <div class="card-body" style="color: #f4645f;">
+                                            <p>只有有效地继承人类知识，同时把世界最先进的科学技术知识拿到手，我们再向前迈出半步，就是最先进的水平，第一流的科学家。<br>
+                                                <span  style="margin-left: 150px"></span>——温伯格
+                                            </p>
+                                            <a href="{{ route('topics.create') }}" class="btn btn-success btn-block" aria-label="Left Align" style="background-color: #fff;border: 1px solid #f4645f">
+                                                <i class="fas fa-pencil-alt mr-2"></i> <span style="color: #f4645f;">新建帖子</span>
                                             </a>
-                                        @endforeach
-                                    @endif
+                                        </div>
+                                    </div>
+                                    {{--//边缘用户--}}
+                                    {{--@if (count($active_users))--}}
+                                        {{--@foreach ($active_users as $active_user)--}}
+                                            {{--<a class="media mt-2" href="{{ route('users.show', $active_user->id) }}">--}}
+                                                {{--<div class="media-left media-middle mr-2 ml-1">--}}
+                                                    {{--<img src="{{ $active_user->avatar }}" width="24px" height="24px" class="media-object" style="border-radius: 12px;">--}}
+                                                {{--</div>--}}
+                                                {{--<div class="media-body">--}}
+                                                    {{--<small class="media-heading text-secondary">{{ $active_user->name }}</small>--}}
+                                                {{--</div>--}}
+                                            {{--</a>--}}
+                                        {{--@endforeach--}}
+                                    {{--@endif--}}
                                 </ul>
                             </div>
                         </div>

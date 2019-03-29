@@ -76,14 +76,14 @@ html, body{height: 100%;}
 
 
 
-.micronews-container .popular-info{background: #f5f6f7; border-top: 2px solid #6294b5; padding-bottom: 25px;}
+.micronews-container .popular-info{background: #f5f6f7; border: 1px solid #eaeaea; padding-bottom: 25px;}
 .micronews-container .popular-info .list{padding:16px 0;}
 .micronews-container .popular-info .list-item{position: relative;}
 .micronews-container .popular-info .list-item i.layui-badge-dot{margin:0 8px;}
 .micronews-container .layui-card{background: none; box-shadow:none;}
 .micronews-container .layui-card-body{padding:0 15px;}
 .micronews-container .layui-card-header{line-height: 50px; height: 50px;}
-.micronews-container .popular-info h3{line-height: 50px; font-size: 16px; color: #6294b5;}
+.micronews-container .popular-info h3{line-height: 32px; font-size: 16px; color: #6294b5;}
 .micronews-container .popular-info .list:last-child{border-bottom: 0;}
 .micronews-container .popular-info .list{border-bottom: 1px solid #eaeaea;  list-style-position: inside; list-style-type: decimal}
 .micronews-container .popular-info .list a{padding-right: 5px; padding-left: 10px;}
