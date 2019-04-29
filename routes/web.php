@@ -1,5 +1,5 @@
 <?php
-
+Route::resource('wx', 'WxController');
 //Route::get('/', 'PagesController@root')->name('root');
 Route::resource('/', 'PagesController', ['only' => ['index']]);
 // Authentication Routes...
@@ -34,3 +34,4 @@ Route::resource('notifications', 'NotificationsController', ['only' => ['index']
 
 //时间轴
 Route::resource('time', 'TimeController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::resource('collection', 'ReadabilityController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
