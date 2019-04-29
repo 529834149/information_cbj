@@ -13,7 +13,7 @@ class WxController extends Controller
      */
     public function index()
     {
-        
+        echo $_GET['echostr'];
     }
 
     /**
