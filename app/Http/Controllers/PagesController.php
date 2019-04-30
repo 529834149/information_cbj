@@ -20,6 +20,7 @@ class PagesController extends Controller
      */
     public function index(Request $request, Topic $topic,User $user)
     {
+        dd(phpinfo());
 //        Redis::set('name', 'Taylor');
 //        $ress =Redis::get('name');
 //        dd($ress);
