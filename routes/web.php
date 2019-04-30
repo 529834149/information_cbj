@@ -1,4 +1,5 @@
 <?php
+Route::resource('wx/weixin', 'WxController@weixin');
 Route::resource('wx', 'WxController');
 //Route::get('/', 'PagesController@root')->name('root');
 Route::resource('/', 'PagesController', ['only' => ['index']]);
